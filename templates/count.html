@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>count</title>
+</head>
+<body>
+<h1>Counted {{count}} words in your text!</h1>
+
+
+<form action="{% url 'home' %}">
+    <input type="submit" value="Start again!"/>
+</form>
+
+<br />
+
+
+{{ fulltext }}
+
+<h1>Wordcount:</h1>
+
+{% for word, counttotal in worddict %}
+    {{ word }}: {{ counttotal }}
+    <br />
+{% endfor %}
+</body>
+</html>
